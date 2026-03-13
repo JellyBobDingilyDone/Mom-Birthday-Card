@@ -65,6 +65,16 @@ h1 {
   background: rgba(255, 255, 255, 0.08);
   padding: 20px;
   border-radius: 16px;
+  opacity: 0;
+  transform: translateY(8px) scale(0.95);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.member.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
 }
 
 .name {

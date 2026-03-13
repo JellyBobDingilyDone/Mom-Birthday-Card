@@ -21,7 +21,7 @@ async function loadFamily() {
   }, 150);
 
   setTimeout(() => {
-    data.family.forEach((member) => {
+    data.family.forEach((member, index) => {
       const card = document.createElement("div");
       card.className = "member";
 
@@ -32,12 +32,18 @@ async function loadFamily() {
 `;
 
       container.appendChild(card);
-    });
-  }, 1800);
 
-  setTimeout(() => {
-    videoButton.classList.remove("hidden");
-  }, 3000);
+      setTimeout(() => {
+        card.classList.add("show");
+      }, index * 900);
+    });
+
+    const totalTime = data.family.length * 900 + 900;
+
+    setTimeout(() => {
+      videoButton.classList.remove("hidden");
+    }, totalTime);
+  }, 1800);
 }
 
 loadFamily();
