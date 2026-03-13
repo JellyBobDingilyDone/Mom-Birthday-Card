@@ -1,9 +1,13 @@
 async function loadFamily() {
-  const response = await fetch("data/family.json");
-  const data = await response.json();
+  let data = {
+    family: [],
+  };
+  try {
+    const response = await fetch("data/family.json");
+    data = await response.json();
+  } catch {}
 
   const container = document.getElementById("family-container");
-
   container.innerHTML = "";
 
   data.family.forEach((member) => {
@@ -11,13 +15,15 @@ async function loadFamily() {
     card.className = "member";
 
     card.innerHTML = `
-<div class="name">${member.name}</div>
-<div class="role">${member.role}</div>
-<div class="member-message">${member.message}</div>
-`;
+      <div class="name">${member.name}</div>
+      <div class="role">${member.role}</div>
+      <div class="member-message">${member.message}</div>
+    `;
 
     container.appendChild(card);
   });
 }
 
-loadFamily();
+loadFamily().catch((error) => {
+  console.error("Failed to load family data:", error);
+});

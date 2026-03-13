@@ -1,24 +1,24 @@
 {
   "family": [
     {
-      "name": "Sergey",
-      "role": "Dad",
-      "message": "Thank you for always taking care of our family."
+      "name": "Любимый",
+      "role": "Папа",
+      "message": "Спасибо тебе за заботу, тепло и любовь, которые ты даришь нашей семье каждый день."
     },
     {
-      "name": "Artem",
-      "role": "Son",
-      "message": "Mom, you are the warmest and kindest person in our lives ❤️"
+      "name": "Артём",
+      "role": "Сын",
+      "message": "Мама, ты самый добрый и заботливый человек в моей жизни. Я очень тебя люблю."
     },
     {
-      "name": "Anna",
-      "role": "Daughter",
-      "message": "You make our family strong and happy every day."
+      "name": "Соня",
+      "role": "Дочь",
+      "message": "Спасибо тебе за поддержку, доброту и бесконечную любовь."
     },
     {
-      "name": "Olga",
-      "role": "Grandmother",
-      "message": "We love you more than words can say."
+      "name": "Алика",
+      "role": "Сын",
+      "message": "Желаю тебе здоровья, счастья и радости каждый день."
     }
   ]
 }
