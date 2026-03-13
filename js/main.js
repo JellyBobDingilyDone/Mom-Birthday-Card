@@ -70,7 +70,7 @@ async function loadFamily() {
       }, index * appearTimeout);
     });
 
-    const totalTime = data.family.length * appearTimeout + appearTimeout;
+    const totalTime = data.family.length * appearTimeout + appearTimeout / 2;
 
     setTimeout(() => {
       videoButton.classList.remove("hidden");

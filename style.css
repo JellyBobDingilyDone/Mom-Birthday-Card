@@ -71,24 +71,24 @@ h1 {
   transition:
     opacity 0.8s ease,
     transform 0.8s ease,
-    box-shadow 0.6s ease;
+    box-shadow 0.8s ease;
 }
 
 .member.show {
   opacity: 1;
   transform: translateY(0) scale(1);
-  animation: starFlash 1s ease;
+  animation: starFlash 2s ease;
 }
 
 @keyframes starFlash {
   0% {
     box-shadow: 0 0 0 rgba(255, 255, 255, 0);
   }
-  40% {
+  50% {
     box-shadow: 0 0 25px rgba(255, 255, 255, 0.9);
   }
   100% {
-    box-shadow: 0 0 18px rgba(255, 255, 255, 0.45);
+    box-shadow: 0 0 0 rgba(255, 255, 255, 0);
   }
 }
 
