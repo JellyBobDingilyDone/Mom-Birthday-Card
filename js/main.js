@@ -2,28 +2,42 @@ async function loadFamily() {
   let data = {
     family: [],
   };
+
   try {
     const response = await fetch("data/family.json");
     data = await response.json();
   } catch {}
 
+  const introText = document.getElementById("intro-text");
   const container = document.getElementById("family-container");
+  const videoButton = document.getElementById("open-video-btn");
+
   container.innerHTML = "";
 
-  data.family.forEach((member) => {
-    const card = document.createElement("div");
-    card.className = "member";
+  introText.classList.remove("hidden");
 
-    card.innerHTML = `
-      <div class="name">${member.name}</div>
-      <div class="role">${member.role}</div>
-      <div class="member-message">${member.message}</div>
-    `;
+  setTimeout(() => {
+    introText.classList.add("show");
+  }, 150);
 
-    container.appendChild(card);
-  });
+  setTimeout(() => {
+    data.family.forEach((member) => {
+      const card = document.createElement("div");
+      card.className = "member";
+
+      card.innerHTML = `
+<div class="name">${member.name}</div>
+<div class="role">${member.role}</div>
+<div class="member-message">${member.message}</div>
+`;
+
+      container.appendChild(card);
+    });
+  }, 1800);
+
+  setTimeout(() => {
+    videoButton.classList.remove("hidden");
+  }, 3000);
 }
 
-loadFamily().catch((error) => {
-  console.error("Failed to load family data:", error);
-});
+loadFamily();

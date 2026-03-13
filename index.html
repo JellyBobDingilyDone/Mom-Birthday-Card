@@ -18,10 +18,14 @@
 
         <p class="subtitle">Сообщения от твоей семьи</p>
 
+        <div id="intro-text" class="intro-text hidden">
+          Мама, это небольшое поздравление для тебя ❤️
+        </div>
+
         <div id="family-container" class="family-grid"></div>
 
-        <button id="open-video-btn" class="video-button">
-          Посмотреть видео для тебя 🎥
+        <button id="open-video-btn" class="video-button hidden">
+          Посмотреть видео сделанное для тебя 🎥
         </button>
       </section>
     </main>
@@ -32,7 +36,7 @@
       <div class="video-dialog">
         <button id="close-video-btn" class="close-button">×</button>
 
-        <h2 class="video-title">Небольшое видео сделанное с любовью ❤️</h2>
+        <h2 class="video-title">Небольшое видео ❤️</h2>
 
         <video id="birthday-video" class="popup-video" controls playsinline>
           <source src="assets/video/mom-message.mp4" type="video/mp4" />
