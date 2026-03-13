@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Happy Birthday Mom ❤️</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <canvas id="stars"></canvas>
+
+    <main class="container">
+      <section class="card">
+        <h1>Happy Birthday Mom ❤️</h1>
+
+        <p class="subtitle">Messages from your family</p>
+
+        <div id="family-container" class="family-grid"></div>
+
+        <button id="open-video-btn" class="video-button">
+          Watch Birthday Message 🎥
+        </button>
+      </section>
+    </main>
+
+    <div id="video-modal" class="video-modal hidden">
+      <div id="video-backdrop" class="video-backdrop"></div>
+
+      <div class="video-dialog">
+        <button id="close-video-btn" class="close-button">×</button>
+
+        <h2 class="video-title">A message for you ❤️</h2>
+
+        <video id="birthday-video" class="popup-video" controls playsinline>
+          <source src="assets/video/mom-message.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </div>
+
+    <script src="js/stars.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/video-player.js"></script>
+  </body>
+</html>
