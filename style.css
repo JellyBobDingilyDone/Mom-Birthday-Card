@@ -173,6 +173,8 @@ h1 {
 
 .popup-video {
   width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
   border-radius: 12px;
 }
 
