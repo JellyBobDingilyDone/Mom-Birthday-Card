@@ -8,14 +8,6 @@ function openVideoModal() {
   modal.classList.remove("hidden");
   modal.setAttribute("aria-hidden", "false");
   document.body.style.overflow = "hidden";
-
-  const playPromise = video.play();
-  if (playPromise && typeof playPromise.catch === "function") {
-    playPromise.catch(() => {
-      // Some browsers block autoplay with sound after modal open.
-      // Controls stay visible, so user can tap play manually.
-    });
-  }
 }
 
 function closeVideoModal() {
